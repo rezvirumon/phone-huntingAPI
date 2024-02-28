@@ -12,20 +12,26 @@
 
 <body>
 
-    <header>
-
+    <header class="container mx-auto my-5">
+        <div class="p-3 ">
+            <h1 class="text-2xl text-center cursor-pointer border-b border-accent pb-2 rounded-md hover:text-accent transition">Welcome to Mobile Bazar</h1>
+        </div>
     </header>
 
-    <main class="container mx-auto mt-8">
+    <main class="container mx-auto mt-8 p-5">
 
         <section class="my-5 flex space-x-2">
-            <input id="search-field" type="text" placeholder="Search Here" class="input input-bordered input-accent w-full max-w-xs" />
+            <input id="search-field" type="text" placeholder="Search Here Mobile" class="input input-bordered input-accent w-full max-w-xs" />
             <button onclick="handleSearch()" class="btn btn-outline btn-accent">Search</button>
         </section>
 
         <!-- Search result -->
         <section >
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"> 
+            </div>
+            <!-- Show All Button -->
+            <div id="show-all-container" class="hidden">
+                <button class="btn btn-outline btn-accent">Show All</button>
             </div>
         </section>
     </main>
