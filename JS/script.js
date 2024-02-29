@@ -23,8 +23,8 @@ const displayPhones = (phones, isShowAll) => {
     };
 
     //display first 12 phones if not show all
-    if(!isShowAll){
-    phones = phones.slice(0, 12);
+    if (!isShowAll) {
+        phones = phones.slice(0, 12);
     }
 
     phones.forEach(phone => {
@@ -39,7 +39,7 @@ const displayPhones = (phones, isShowAll) => {
         <h2 class="card-title">${phone.phone_name}</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div class="card-actions justify-end">
-        <button class="btn btn-outline btn-accent mt-5 mx-auto">View Details</button>
+        <button onclick="handleShowDetailts('${phone.slug}')" class="btn btn-outline btn-accent mt-5 mx-auto">View Details</button>
         </div>
         </div>`;
 
@@ -49,6 +49,15 @@ const displayPhones = (phones, isShowAll) => {
 
     //hide loading spinner
     toggleLoadingSpinner(false);
+}
+
+// Show Details
+const handleShowDetailts = async (id) => {
+    console.log('clicked show details', id);
+    //load single phone data
+    const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
+    const data = await res.json();
+    console.log(data);
 }
 
 

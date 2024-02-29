@@ -14,31 +14,52 @@
 
     <header class="container mx-auto my-5">
         <div class="p-3 ">
-            <h1 class="text-2xl text-center cursor-pointer border border-accent py-2 rounded-md hover:text-accent transition">Welcome to Mobile Bazar</h1>
+            <h1
+                class="text-2xl text-center cursor-pointer border border-accent py-2 rounded-md hover:text-accent transition">
+                Welcome to Mobile Bazar</h1>
         </div>
     </header>
 
     <main class="container mx-auto mt-8 p-5">
 
         <section class="my-5 flex space-x-2">
-            <input id="search-field" type="text" placeholder="Search Here Mobile" class="input input-bordered input-accent w-full max-w-xs" />
+            <input id="search-field" type="text" placeholder="Search Here Mobile"
+                class="input input-bordered input-accent w-full max-w-xs" />
             <button onclick="handleSearch()" class="btn btn-accent">Search</button>
         </section>
 
         <!-- Search result -->
-        <section >
+        <section>
             <div id="loading-spinner" class="text-center my-40 hidden">
                 <progress class="progress w-56 progress-accent"></progress>
-                
+
             </div>
 
-            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"> 
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             </div>
             <!-- Show All Button -->
             <div id="show-all-container" class="hidden text-center">
                 <button onclick="handleShowAll()" class="btn btn-outline btn-accent btn-wide my-5 ">Show All</button>
             </div>
         </section>
+
+        <!-- Show Details Modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="show_details_modal.showModal()">open modal</button>
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+
     </main>
 
     <footer>
