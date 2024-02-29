@@ -31,7 +31,7 @@ const displayPhones = (phones, isShowAll) => {
         // console.log(phone);
         // 2 create a div
         const phoneCard = document.createElement('div');
-        phoneCard.classList = `card p-5 bg-white shadow-xl`;
+        phoneCard.classList = `card p-5  shadow-xl`;
         // 3: set inner HTML
         phoneCard.innerHTML = `<figure><img src="${phone.image}"
         alt="Shoes" /></figure>
@@ -39,7 +39,7 @@ const displayPhones = (phones, isShowAll) => {
         <h2 class="card-title">${phone.phone_name}</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div class="card-actions justify-end">
-        <button onclick="handleShowDetailts('${phone.slug}')" class="btn btn-outline btn-accent mt-5 mx-auto">View Details</button>
+        <button onclick="handleShowDetailts('${phone.slug}')" class="btn btn-outline btn-accent mt-2 mx-auto">View Details</button>
         </div>
         </div>`;
 
@@ -64,12 +64,12 @@ const handleShowDetailts = async (id) => {
 
 const showPhoneDetails = (phone) => {
     console.log(phone);
-    const phoneName=document.getElementById('show-details-phone-name');
+    const phoneName = document.getElementById('show-details-phone-name');
     phoneName.innerText = phone.name;
 
-    const showDetailContainer= document.getElementById('show-detail-container');
+    const showDetailContainer = document.getElementById('show-detail-container');
 
-    showDetailContainer.innerHTML=`
+    showDetailContainer.innerHTML = `
     <img src="${phone.image}"/>
     <p><span class="features">Storage: </span>${phone?.mainFeatures?.storage}</p>
     <p><span class="features">Display: </span>${phone?.mainFeatures?.displaySize}</p>

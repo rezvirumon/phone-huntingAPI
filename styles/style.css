@@ -1,7 +1,22 @@
 .modal-box{
+    background-color: white; 
+     
+}
+.card{
+    background-color: rgba(12, 34, 54, 0.245);
+}
+.card img{
     background-color: white;
-    
-    
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#phone-container h2{
+    color: white;
+}
+
+#phone-container p{
+    color: rgb(176, 170, 170);
 }
 
 #show-detail-container .features{
