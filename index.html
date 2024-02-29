@@ -8,6 +8,9 @@
     <!-- DaisyUI & Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Style CSS Sheet -->
+    <link rel="stylesheet" href="styles/style.css">
+
 </head>
 
 <body>
@@ -45,15 +48,18 @@
 
         <!-- Show Details Modal -->
         <!-- Open the modal using ID.showModal() method -->
-        <button class="btn" onclick="show_details_modal.showModal()">open modal</button>
+        
         <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
             <div class="modal-box">
-                <h3 class="font-bold text-lg">Hello!</h3>
-                <p class="py-4">Press ESC key or click the button below to close</p>
+                <h3 id="show-details-phone-name" class="font-bold text-lg py-2 text-accent">Hello!</h3>
+                <div id="show-detail-container" class="">
+                    <!-- Details -->
+                </div>
+
                 <div class="modal-action">
                     <form method="dialog">
                         <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn">Close</button>
+                        <button class="btn btn-accent">Close</button>
                     </form>
                 </div>
             </div>
